@@ -1,10 +1,25 @@
+<% content_for :title do %>Pudim Dashboard<% end %>
 <div class="gridster">
   <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="notices" data-view="Meter" data-title="Notices" data-min="0" data-max="10637"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="using-lead-tracking" data-view="Number" data-title="Using Lead Tracking" data-moreinfo="Accounts which have URL =! Landing Page"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="using-lead-tracking-on-lead-scoring" data-view="Number" data-title="LT + Scoring" data-moreinfo="Accounts using Lead Tracking on Lead Scoring"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="using-lead-tracking-on-segmentation" data-view="Number" data-title="LT + Segmentation" data-moreinfo="Accounts using Lead Tracking on Segmentation"></div>
     </li>
   </ul>
 </div>
 
 
 <!-- curl -d '{ "auth_token": "puddiness", "value": 7292 }' http://localhost:3030/widgets/notices -->
+<!-- curl -d '{ "auth_token": "puddiness", "current": 100 }' http://localhost:3030/widgets/using-lead-tracking -->
+<!-- curl -d '{ "auth_token": "puddiness", "value": 7292 }' https://lit-stream-8596.herokuapp.com/widgets/notices -->
